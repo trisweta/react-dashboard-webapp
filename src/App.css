@@ -1,0 +1,71 @@
+
+.grid-custom {
+    grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    grid-template-rows: 0.1fr 0.1fr 0.4fr 0.7fr 0.9fr;
+    grid-template-areas: 
+    "side nav nav nav nav"
+    "side content1 content1 content1 content1"
+    "side content2 content3 content4 content5"
+    "side content6 content6 content6 content6"
+    ". content7 content7 content7 content7";
+    grid-gap: 1rem;
+    grid-column-gap: 0;
+
+  }
+
+#side{
+    grid-area:side;
+}
+
+#nav{
+    grid-area:nav;
+}
+
+#content1{
+    grid-area:content1;
+}
+
+#content2{
+    grid-area:content2;
+}
+
+#content3{
+    grid-area:content3;
+}
+
+#content4{
+    grid-area:content4;
+}
+
+#content5{
+    grid-area:content5;
+}
+
+#content6{
+    grid-area:content6;
+}
+
+#content7{
+    grid-area:content7;
+}
+@media only screen and (max-width: 600px) {
+    .grid-custom {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        "mobdash"
+        "nav"
+        "content1"
+        "content2"
+        "content3"
+        "content4"
+        "content5"
+        "content6"
+        "content7";
+    }
+    
+    /* New component for mobile */
+    #mobdash {
+      grid-area: mobdash;
+    }
+  }
